@@ -3,7 +3,7 @@
 const fs = require("fs"),
     path = require("path"),
     zips = {},
-    data = fs.readFileSync("./free-zipcode-database-Primary.csv", "utf8").replace(/\r/g, "").split("\n");
+    data = fs.readFileSync("./zipcodedata.csv", "utf8").replace(/\r/g, "").split("\n");
 let  str;
 data.shift();
 
@@ -31,8 +31,14 @@ data.forEach(function(line) {
         const o = {};
 
         o.zip = clean(line[0]);
-        o.city = ucfirst(clean(line[2]));
-        o.state = clean(line[3]);
+        o.city = clean(line[2]);
+        o.state = clean(line[4]);
+        o.timezone = clean(line[5]);
+        o.utc = clean(line[6]);
+        o.dst = clean(line[7]);
+        o.latitude = clean(line[8]);
+        o.longitude = clean(line[9]);
+
         if (!zips[o.zip]) {
             zips[o.zip] = o;
         }
