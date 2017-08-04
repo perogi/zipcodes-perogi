@@ -13,12 +13,13 @@ It was then transformed into a JSON object and then wrapped with some helper met
 
 Differences
 -----------
-I only wanted the Primary data from the federalgovernmentzipcodes.us website.  I also only need a city and state lookup so I removed the distance functionality
-found in his project.  Finally, I do not need the Canada data so I removed that from the repo as well. 
+I only wanted the Primary data from the federalgovernmentzipcodes.us website.  Finally, I do not need the Canada data so I removed that from the repo as well.  
+ 
+Version 1.1.0 by request I added lat/long/timezone/long statename/whether or not the zipcode uses daylight savings time
 
 Usage
 -----
-    var zipcodes = require('zipcodes');
+    var zipcodes = require('zipcodes-perogi');
 
 Zipcode Lookup
 --------------
@@ -28,7 +29,12 @@ Zipcode Lookup
     { 
         zip: '90210',  
         city: 'Beverly Hills',  
-        state: 'CA'   
+        state: 'CA',
+        timezone: 'Pacific',
+        utc: '-8',
+        dst: 'Y',
+        latitude: 34.096629,
+        longitude: -118.412426
     }
 
 
@@ -68,15 +74,3 @@ SP2:TODO - describe how to run the scripts from the command line
 
 The original CSV file that I am using for this data is not included in this repo, but I did wrap up
 the best way to get the data and how to convert it into the format that this module uses.
-
-To develop with this module, just `make` it and it will fetch the latest zipcodes and reprocess them.
-
-    make
-
-To just fetch and process the zipcodes:
-
-    make codes
-
-To run the very simple test suite:
-
-    make tests
