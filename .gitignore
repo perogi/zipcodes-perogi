@@ -1,6 +1,5 @@
 node_modules
 scripts/*.csv
-/yarn.lock
 /yarn-error.log
 /coverage/
 /scripts/*.xlsx
