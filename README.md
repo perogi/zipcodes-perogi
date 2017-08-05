@@ -17,7 +17,7 @@ I only wanted the Primary data from the federalgovernmentzipcodes.us website.  F
 
 Versions
 --------
-Version 1.1.0: by request I added timezone offset/timezone/timezone abbreviation/long statename/whether or not the zipcode observes daylight savings time.
+Version 1.1.*: by request I added timezone offset/timezone/timezone abbreviation/long statename/whether or not the zipcode observes daylight savings time.
 Note that the end user will have to determine if daylight savings time is in use and alter the offset as appropriate. 
 Future releases _may_ include that enhancement. I would recommending looking at npm package moment/moment-timezone for the use of dates and time.
 
