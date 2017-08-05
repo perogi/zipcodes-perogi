@@ -4,19 +4,19 @@ const fs = require("fs"),
     path = require("path"),
     zips = {},
     data = fs.readFileSync("./zipcodedata.csv", "utf8").replace(/\r/g, "").split("\n");
-let  str;
+let str;
 data.shift();
 
 
-const clean = function(str) {
+const clean = function (str) {
     return str.replace(/"/g, "").trimLeft();
 };
 
-const ucfirst = function(str) {
+const ucfirst = function (str) {
     str = str.toLowerCase();
     const lines = str.split(" ");
-    lines.forEach(function(s, i) {
-        const firstChar      = s.charAt(0),
+    lines.forEach(function (s, i) {
+        const firstChar = s.charAt(0),
             upperFirstChar = firstChar.toUpperCase();
 
         lines[i] = upperFirstChar + s.substring(1);
@@ -25,19 +25,19 @@ const ucfirst = function(str) {
     return lines.join(" ");
 };
 
-data.forEach(function(line) {
+data.forEach(function (line) {
     line = line.split(",");
     if (line.length > 1) {
         const o = {};
 
         o.zip = clean(line[0]);
         o.city = clean(line[2]);
-        o.state = clean(line[4]);
+        o.state = clean(line[3]);
+        o.stateName = clean(line[4]);
         o.timezone = clean(line[5]);
-        o.utc = clean(line[6]);
-        o.dst = clean(line[7]);
-        o.latitude = clean(line[8]);
-        o.longitude = clean(line[9]);
+        o.timezoneShort = clean(line[6]);
+        o.offset = clean(line[7]);
+        o.dstObserved = clean(line[8]);
 
         if (!zips[o.zip]) {
             zips[o.zip] = o;
