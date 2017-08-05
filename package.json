@@ -1,7 +1,7 @@
 {
   "name": "zipcodes-perogi",
   "description": "Useful zipcode database with helper methods",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "perogi <github@perogi.org>",
   "bugs": {
     "web": "https://github.com/perogi/zipcodes-perogi/issues"
@@ -13,13 +13,11 @@
     "url": "https://github.com/perogi/zipcodes-perogi"
   },
   "scripts": {
-    "test": "istanbul cover node_modules/mocha/bin/_mocha $(find api -name '*.test.js') --print both -- vows --spec ./tests/lookup.js",
-    "coverage": "istanbul cover node_modules/mocha/bin/mocha *.test.js"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha tests/*.test.js"
   },
   "devDependencies": {
+    "chai": "^4.1.1",
     "istanbul": "~0.3.13",
-    "mocha": "^3.4.2",
-    "path": "^0.12.7",
-    "vows": "^0.8.1"
+    "mocha": "^3.4.2"
   }
 }

@@ -13,54 +13,115 @@ It was then transformed into a JSON object and then wrapped with some helper met
 
 Differences
 -----------
-I only wanted the Primary data from the federalgovernmentzipcodes.us website.  I also only need a city and state lookup so I removed the distance functionality
-found in his project.  Finally, I do not need the Canada data so I removed that from the repo as well. 
+I only wanted the Primary data from the federalgovernmentzipcodes.us website.  Finally, I do not need the Canada data so I removed that from the repo as well.  
+
+Versions
+--------
+Version 1.1.0: by request I added timezone offset/timezone/timezone abbreviation/long statename/whether or not the zipcode observes daylight savings time.
+Note that the end user will have to determine if daylight savings time is in use and alter the offset as appropriate. 
+Future releases _may_ include that enhancement. I would recommending looking at npm package moment/moment-timezone for the use of dates and time.
 
 Usage
 -----
-    var zipcodes = require('zipcodes');
+    var zipcodes = require('zipcodes-perogi');
 
 Zipcode Lookup
 --------------
 
-    var hills = zipcodes.lookup(90210);  
-
+    const hills = zipcodes.lookup(90210);  
+      
+    response:
     { 
         zip: '90210',  
         city: 'Beverly Hills',  
-        state: 'CA'   
+        state: 'CA',
+        stateName: 'California',
+        timezone: 'Pacific',
+        timezoneShort: 'PST',
+        offset: '-8',
+        dstObserved: 'Y'
     }
 
 
 Lookup By Name
 --------------
 
-    var l = zipcodes.lookupByName('Concord', 'NH');
-    
+    const l = zipcodes.lookupByName('Concord', 'NH');  
+      
     //Always returns an array, since cities can have multiple zip codes
+    response: 
     [ 
         { 
             zip: '03301',
             city: 'Concord',
-            state: 'NH' 
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y'
         },
         { 
             zip: '03302',
             city: 'Concord',
-            state: 'NH' 
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y'
         },
         { 
             zip: '03303',
             city: 'Concord',
-            state: 'NH' 
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y'  
         } ,
         { 
             zip: '03305',
             city: 'Concord',
-            state: 'NH' 
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y' 
         } 
      ]
 
+Lookup By State
+--------------
+
+    const l = zipcodes.lookupByState('NH');
+      
+    //response would be an array of cities with corresponding data
+    [ 
+        { 
+            zip: '03031',
+            city: 'Amherst',
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y' 
+        },
+        { 
+            zip: '03032',
+            city: 'Auburn',
+            state: 'NH',
+            stateName: 'New Hampshire',
+            timezone: 'Eastern',
+            timezoneShort: 'EST',
+            offset: '-5',
+            dstObserved: 'Y' 
+        },
+     ...
+     ]
 
 Development
 -----------
@@ -68,15 +129,3 @@ SP2:TODO - describe how to run the scripts from the command line
 
 The original CSV file that I am using for this data is not included in this repo, but I did wrap up
 the best way to get the data and how to convert it into the format that this module uses.
-
-To develop with this module, just `make` it and it will fetch the latest zipcodes and reprocess them.
-
-    make
-
-To just fetch and process the zipcodes:
-
-    make codes
-
-To run the very simple test suite:
-
-    make tests
