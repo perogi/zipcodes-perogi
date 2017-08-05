@@ -1,7 +1,7 @@
 Zip Code Lookups
 ================
 SP2:TODO update this build status
-[![Build Status](https://travis-ci.org/davglass/zipcodes.svg?branch=master)](https://travis-ci.org/davglass/zipcodes)
+[![Build Status](https://travis-ci.org/perogi/zipcodes-perogi.svg?branch=master)](https://travis-ci.org/perogi/zipcodes-perogi)
 
 This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).  
 
