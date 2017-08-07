@@ -38,6 +38,8 @@ data.forEach(function (line) {
         o.timezoneShort = clean(line[6]);
         o.offset = clean(line[7]);
         o.dstObserved = clean(line[8]);
+        o.latitude = clean(line[9]);
+        o.longitude = clean(line[10]);
 
         if (!zips[o.zip]) {
             zips[o.zip] = o;

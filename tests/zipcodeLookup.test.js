@@ -9,7 +9,9 @@ const zip03301 = {
     timezone: 'Eastern',
     timezoneShort: 'EST',
     offset: '-5',
-    dstObserved: 'Y'
+    dstObserved: 'Y',
+    latitude: "43.23876",
+    longitude: "-71.511"
 };
 const zipcodes = require('../lib/index');
 
