@@ -1,25 +1,27 @@
 const chai = require("chai");
 const expect = chai.expect;
-
-const zip03301 = {
-    zip: '03301',
-    city: 'Concord',
-    state: 'NH',
-    stateName: 'New Hampshire',
-    timezone: 'Eastern',
-    timezoneShort: 'EST',
-    offset: '-5',
-    dstObserved: 'Y',
-    latitude: "43.23876",
-    longitude: "-71.511"
-};
 const zipcodes = require('../lib/index');
 
 describe('zipcodes lookup tests', () => {
 
     it('gets the data for zipcode 03301', () => {
         const result = zipcodes.lookup("03301");
-        expect(result).to.deep.equal(zip03301);
+        expect(result.zip).to.equal("03301");
+        expect(result.city).to.equal("Concord");
+        expect(result.state).to.equal("NH");
+        expect(result.timeZoneId).to.equal("America/New_York");
+    });
+});
+
+describe('zipcodes timezone lookup tests', () => {
+
+    it('gets the data for zipcode 03301', () => {
+        const result = zipcodes.lookupWithTime("03301");
+        expect(result.zip).to.equal("03301");
+        expect(result.city).to.equal("Concord");
+        expect(result.state).to.equal("NH");
+        expect(result.timeZoneId).to.equal("America/New_York");
+        expect(result.time).to.not.equal(undefined);
     });
 });
 
