@@ -2,7 +2,7 @@ const chai = require("chai");
 const expect = chai.expect;
 const zipcodes = require('../lib/index');
 
-describe('zipcodes lookup tests', () => {
+describe('zipcode lookup tests', () => {
 
     it('gets the data for zipcode 03301', () => {
         const result = zipcodes.lookup("03301");
@@ -11,9 +11,30 @@ describe('zipcodes lookup tests', () => {
         expect(result.state).to.equal("NH");
         expect(result.timeZoneId).to.equal("America/New_York");
     });
+
+    it(' a bad zipcode is sent in', () => {
+        const result = zipcodes.lookup("ABCDE");
+        expect(result).to.equal(undefined);
+    });
+
+    it(' an invalid but numeric zipcode is sent in', () => {
+        const result = zipcodes.lookup("01465");
+        expect(result).to.equal(undefined);
+    });
+
+    it(' no zipcode is sent in', () => {
+        const result = zipcodes.lookup("");
+        console.log(result);
+        expect(result).to.equal(undefined);
+    });
+
+    it(' undefined zipcode is sent in', () => {
+        const result = zipcodes.lookup(undefined);
+        expect(result).to.equal(undefined);
+    });
 });
 
-describe('zipcodes timezone lookup tests', () => {
+describe('zipcode timezone lookup tests', () => {
 
     it('gets the data for zipcode 03301', () => {
         const result = zipcodes.lookupWithTime("03301");
@@ -23,7 +44,29 @@ describe('zipcodes timezone lookup tests', () => {
         expect(result.timeZoneId).to.equal("America/New_York");
         expect(result.time).to.not.equal(undefined);
     });
+
+    it(' a bad zipcode is sent in', () => {
+        const result = zipcodes.lookupWithTime("ABCDE");
+        expect(result).to.equal(undefined);
+    });
+
+    it(' an invalid but numeric zipcode is sent in', () => {
+        const result = zipcodes.lookupWithTime("01465");
+        expect(result).to.equal(undefined);
+    });
+
+    it(' no zipcode is sent in', () => {
+        const result = zipcodes.lookupWithTime("");
+        console.log(result);
+        expect(result).to.equal(undefined);
+    });
+
+    it(' undefined zipcode is sent in', () => {
+        const result = zipcodes.lookupWithTime(undefined);
+        expect(result).to.equal(undefined);
+    });
 });
+
 
 describe('lookup zipcodes by city, state tests', () => {
     it("should find by city and state", () => {
