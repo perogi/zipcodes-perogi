@@ -7,16 +7,23 @@ This is a fork of [davglass' excellent zipcode lookup project](https://github.co
 
 A localized (flatfile) zipcode lookup.
 
-Zipcode data was taken from here: http://federalgovernmentzipcodes.us/free-zipcode-database-Primary.csv
+Zipcode data is taken from a new more up-to-date source compared to davglass' project. 
+This source has monthly updates for zip code data. For example: September 2017 data removed 7 zip codes that are no longer used.
 
 It was then transformed into a JSON object and then wrapped with some helper methods.
 
-Differences
+Other Differences
 -----------
-I only wanted the Primary data from the federalgovernmentzipcodes.us website.  Finally, I do not need the Canada data so I removed that from the repo as well.  
+This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 Versions
 --------
+Version 1.2.201709 is the new way to show the year and month of the latest data in format `yyyyMM` 
+
+Version 1.2.0 
+    Function lookup: returns zip code, city, state, latitude, longitude, timeZoneId.
+    Function lookupWithTime: returns zip code, city, state, latitude, longitude, timeZoneId, and current time in that time zone.
+
 Version 1.1.*: by request I added timezone offset/timezone/timezone abbreviation/long statename/whether or not the zipcode observes daylight savings time.
 Note that the end user will have to determine if daylight savings time is in use and alter the offset as appropriate. 
 Future releases _may_ include that enhancement. I would recommending looking at npm package moment/moment-timezone for the use of dates and time.
@@ -123,9 +130,6 @@ Lookup By State
      ...
      ]
 
-Development
------------
-SP2:TODO - describe how to run the scripts from the command line
 
-The original CSV file that I am using for this data is not included in this repo, but I did wrap up
+The original CSV file that I am using for this data is not included in this repo due to licensing laws, but I did wrap up
 the best way to get the data and how to convert it into the format that this module uses.

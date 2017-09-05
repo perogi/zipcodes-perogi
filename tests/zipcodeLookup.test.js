@@ -18,7 +18,7 @@ describe('zipcode lookup tests', () => {
     });
 
     it(' an invalid but numeric zipcode is sent in', () => {
-        const result = zipcodes.lookup("01465");
+        const result = zipcodes.lookup("63464");
         expect(result).to.equal(undefined);
     });
 
