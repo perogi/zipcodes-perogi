@@ -3,7 +3,7 @@
 const fs = require("fs"),
     path = require("path"),
     zips = {},
-    data = fs.readFileSync("./USZipcodeAndTimezoneData.csv", "utf8").replace(/\r/g, "").split("\n");
+    data = fs.readFileSync("./USZipcodeAndTimezoneDataSept2017.csv", "utf8").replace(/\r/g, "").split("\n");
 let str;
 data.shift();
 
@@ -20,6 +20,8 @@ data.forEach(function (line) {
         o.zip = clean(line[0]);
         o.city = clean(line[1]);
         o.state = clean(line[3]);
+        o.latitude = clean(line[6]);
+        o.longitude = clean(line[7]);
         o.timeZoneId = clean(line[8]);
 
         if (!zips[o.zip]) {
