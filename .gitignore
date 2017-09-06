@@ -3,3 +3,5 @@ scripts/*.csv
 /yarn-error.log
 /coverage/
 /scripts/*.xlsx
+runTimezone.js
+/.idea
