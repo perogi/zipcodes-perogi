@@ -3,3 +3,4 @@ scripts/*.csv
 /yarn-error.log
 /coverage/
 /scripts/*.xlsx
+/scripts/npm-debug.log
