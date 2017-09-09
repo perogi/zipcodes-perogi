@@ -3,5 +3,6 @@ scripts/*.csv
 /yarn-error.log
 /coverage/
 /scripts/*.xlsx
-runTimezone.js
-/.idea
+/scripts/npm-debug.log
+/.idea/
+scripts/runTimezone.js

@@ -20,8 +20,8 @@ data.forEach(function (line) {
         o.zip = clean(line[0]);
         o.city = clean(line[1]);
         o.state = clean(line[3]);
-        o.latitude = clean(line[6]);
-        o.longitude = clean(line[7]);
+        // o.latitude = clean(line[6]);
+        // o.longitude = clean(line[7]);
         o.timeZoneId = clean(line[8]);
 
         if (!zips[o.zip]) {
