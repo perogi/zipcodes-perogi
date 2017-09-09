@@ -4,3 +4,5 @@ scripts/*.csv
 /coverage/
 /scripts/*.xlsx
 /scripts/npm-debug.log
+/.idea/
+scripts/runTimezone.js
