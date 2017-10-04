@@ -1,7 +1,7 @@
 {
   "name": "zipcodes-perogi",
   "description": "Useful zipcode database with helper methods",
-  "version": "1.2.201709",
+  "version": "1.2.201710",
   "author": "perogi <github@perogi.org>",
   "bugs": {
     "web": "https://github.com/perogi/zipcodes-perogi/issues"

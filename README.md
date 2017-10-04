@@ -1,16 +1,11 @@
-Zip Code Lookups
-================
-SP2:TODO update this build status
+Zip Code Lookup
+===============
 [![Build Status](https://travis-ci.org/perogi/zipcodes-perogi.svg?branch=master)](https://travis-ci.org/perogi/zipcodes-perogi)
-
-This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).  
 
 A localized (flatfile) zipcode lookup.
 
-Zipcode data is taken from a new more up-to-date source compared to davglass' project. 
+Zipcode data is taken from a new more up-to-date source compared to [davglass'](https://github.com/davglass/zipcodes) project. 
 This source has monthly updates for zip code data. For example: September 2017 data removed 7 zip codes that are no longer used.
-
-It was then transformed into a JSON object and then wrapped with some helper methods.
 
 Other Differences
 -----------
@@ -18,6 +13,11 @@ This application only has the default zip code information and only for the 50 U
 
 Versions
 --------
+Version 1.3.201710 minor updates to the data.
+
+Version 1.3.201709 updated to remove latitude and longitude to _dramatically_ reduce the size of codes.js. 
+Future enhancement may include these fields again if end users request it.
+
 Version 1.2.201709 is the new way to show the year and month of the latest data in format `yyyyMM` 
 
 Version 1.2.0 
@@ -39,14 +39,24 @@ Zipcode Lookup
       
     response:
     { 
-        zip: '90210',  
-        city: 'Beverly Hills',  
+        zip: '90210',
+        city: 'Beverly Hills',
         state: 'CA',
-        stateName: 'California',
-        timezone: 'Pacific',
-        timezoneShort: 'PST',
-        offset: '-8',
-        dstObserved: 'Y'
+        timeZoneId: 'America/Los_Angeles'
+    }
+
+Zipcode LookupWithTime
+--------------
+
+    const hills = zipcodes.lookupWithTime(03301);  
+      
+    response:
+    { 
+        zip: '03301',
+        city:'Concord',
+        state:'NH',
+        timeZoneId:'America/New_York',
+        time:'2017-09-08T00:19:17-04:00'
     }
 
 
@@ -62,44 +72,28 @@ Lookup By Name
             zip: '03301',
             city: 'Concord',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y'
+            timeZoneId: 'America/New_York"
         },
         { 
             zip: '03302',
             city: 'Concord',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y'
+            timeZoneId: 'America/New_York"
         },
         { 
             zip: '03303',
             city: 'Concord',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y'  
+            timeZoneId: 'America/New_York" 
         } ,
         { 
             zip: '03305',
             city: 'Concord',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y' 
+            timeZoneId: 'America/New_York"
         } 
      ]
-
+     
 Lookup By State
 --------------
 
@@ -111,25 +105,20 @@ Lookup By State
             zip: '03031',
             city: 'Amherst',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y' 
+            timeZoneId: 'America/New_York"
         },
         { 
             zip: '03032',
             city: 'Auburn',
             state: 'NH',
-            stateName: 'New Hampshire',
-            timezone: 'Eastern',
-            timezoneShort: 'EST',
-            offset: '-5',
-            dstObserved: 'Y' 
+            timeZoneId: 'America/New_York"
         },
      ...
      ]
 
 
-The original CSV file that I am using for this data is not included in this repo due to licensing laws, but I did wrap up
+The original CSV file that I am using for this data is not included in this repo due to licensing, but I did wrap up
 the best way to get the data and how to convert it into the format that this module uses.
+
+Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
+  
