@@ -13,6 +13,8 @@ This application only has the default zip code information and only for the 50 U
 
 Versions
 --------
+Version 1.3.201710 minor updates to the data.
+
 Version 1.3.201709 updated to remove latitude and longitude to _dramatically_ reduce the size of codes.js. 
 Future enhancement may include these fields again if end users request it.
 
