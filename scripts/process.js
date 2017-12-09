@@ -4,6 +4,7 @@ const fs = require("fs"),
     path = require("path"),
     zips = {},
     data = fs.readFileSync("./USZipcodeAndTimezoneDataDec2017.csv", "utf8").replace(/\r/g, "").split("\n");
+
 let str;
 data.shift();
 
