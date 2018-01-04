@@ -10,7 +10,7 @@ This source has monthly updates for zip code data. For example: September 2017 d
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201712 very minor updates to the data.
+Version 1.3.201801 minor updates to the data.
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
@@ -98,6 +98,8 @@ the best way to get the data and how to convert it into the format that this mod
 Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
 
 ## Historical Change Log
+Version 1.3.201712 very minor updates to the data.
+
 Version 1.3.201711 very minor updates to the data.
 
 Version 1.3.201710 minor updates to the data.
