@@ -10,7 +10,9 @@ This source has monthly updates for zip code data. For example: September 2017 d
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201801 minor updates to the data.
+Version 1.3.201802 Removal of 4 zipcodes and the addition of 1.  
+All packages have been updated for minor/build versions. Keeping mocha at 3.4.2.  
+nsp check: (+) No known vulnerabilities found 
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
@@ -97,7 +99,12 @@ the best way to get the data and how to convert it into the format that this mod
 
 Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
 
+## nsp check (2018Feb02)
+(+) No known vulnerabilities found
+
 ## Historical Change Log
+Version 1.3.201801 minor updates to the data.
+
 Version 1.3.201712 very minor updates to the data.
 
 Version 1.3.201711 very minor updates to the data.
