@@ -16,12 +16,17 @@
     "test": "istanbul cover node_modules/mocha/bin/_mocha tests/*.test.js"
   },
   "dependencies": {
-    "moment-timezone": "^0.5.14"
+    "moment-timezone": "^0.5.14",
+    "stryker": "^0.19.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "istanbul": "~0.4.5",
     "mocha": "^3.4.2",
-    "node-google-timezone": "^0.1.1"
+    "node-google-timezone": "^0.1.1",
+    "stryker-api": "^0.13.0",
+    "stryker-javascript-mutator": "^0.4.0",
+    "stryker-mocha-framework": "^0.8.3",
+    "stryker-mocha-runner": "^0.10.5"
   }
 }
