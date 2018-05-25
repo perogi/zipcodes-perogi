@@ -6,3 +6,5 @@ scripts/*.csv
 /scripts/npm-debug.log
 /.idea/
 scripts/runTimezone.js
+*.iml
+.npmrc
