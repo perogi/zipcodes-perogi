@@ -6,3 +6,4 @@ scripts/*.csv
 /scripts/npm-debug.log
 /.idea/
 scripts/runTimezone.js
+zipcodes-perogi.iml
