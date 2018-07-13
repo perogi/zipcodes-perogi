@@ -13,8 +13,8 @@ This application only has the default zip code information and only for the 50 U
 Version 1.3.201807 July 2018 data. Removal of a 3 zipcodes. One city renamed. Addition of 6 zipcodes  
 nsp check: (+) 1 vulnerabilities found. 3.7 (low)  
 package tree: stryker > log4js > streamroller > debug   
-Stryker mutation tests.  Passed 100.0
-Apology for not updating during June 2018. I updated the data but never uploaded it to npmjs.org.
+Stryker mutation tests.  Passed 100.0  
+Apology for not updating during June 2018. I updated the data but never uploaded it to npmjs.org.  
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
