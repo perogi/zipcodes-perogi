@@ -10,11 +10,12 @@ This source has monthly updates for zip code data. For example: September 2017 d
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201808 August 2018 data. Removal of a 3 zipcodes. Addition of 1 zipcode.  
-nsp check: (+) 1 vulnerabilities found. 3.7 (low)  
-package tree: stryker > log4js > streamroller > debug   
+Version 1.3.201810 October 2018 data. Removal of a 1 zipcode.  
+nsp check: (+) 0 vulnerabilities found.  
 Stryker mutation tests.  Passed 100.0  
-Apology for not updating during June 2018. I updated the data but never uploaded it to npmjs.org.  
+Lots of formatting changes. Set indent to 2 spaces.
+Update all packages to remove any vulnerabilities. 
+Update scripts to have all tests run as the default.
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
@@ -102,6 +103,12 @@ the best way to get the data and how to convert it into the format that this mod
 Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
 
 ## Historical Change Log
+Version 1.3.201808 August 2018 data. Removal of a 3 zipcodes. Addition of 1 zipcode.  
+nsp check: (+) 1 vulnerabilities found. 3.7 (low)  
+package tree: stryker > log4js > streamroller > debug   
+Stryker mutation tests.  Passed 100.0  
+Apology for not updating during June 2018. I updated the data but never uploaded it to npmjs.org.  
+
 Version 1.3.201807 July 2018 data. Removal of a 3 zipcodes. One city renamed. Addition of 6 zipcodes  
 nsp check: (+) 1 vulnerabilities found. 3.7 (low)  
 package tree: stryker > log4js > streamroller > debug   
