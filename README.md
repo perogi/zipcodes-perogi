@@ -15,6 +15,7 @@ December 2018 data.
 Addition of 1 zipcode.  
 npm audit: (+) 0 vulnerabilities found.
 Stryker mutation tests.  Passed 100.0  
+Removal of event-stream and flatmap-stream packages (dependencies of npm-run-all)
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
