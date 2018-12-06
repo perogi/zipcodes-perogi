@@ -10,11 +10,10 @@ This source has monthly updates for zip code data. For example: September 2017 d
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201811  
-November 2018 data.  
-Addition of 3 zipcodes.  
-Removal of a 1 zipcode.  
-nsp check: (+) 0 vulnerabilities found.  
+Version 1.3.201812  
+December 2018 data.  
+Addition of 1 zipcode.  
+npm audit: (+) 0 vulnerabilities found.
 Stryker mutation tests.  Passed 100.0  
 
 ## Usage
@@ -103,6 +102,13 @@ the best way to get the data and how to convert it into the format that this mod
 Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
 
 ## Historical Change Log
+Version 1.3.201811  
+November 2018 data.  
+Addition of 3 zipcodes.  
+Removal of a 1 zipcode.  
+nsp check: (+) 0 vulnerabilities found.  
+Stryker mutation tests.  Passed 100.0  
+
 Version 1.3.201810 October 2018 data. Removal of a 1 zipcode.  
 nsp check: (+) 0 vulnerabilities found.  
 Stryker mutation tests.  Passed 100.0  
