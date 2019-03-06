@@ -10,9 +10,9 @@ This source has monthly updates for zip code data. For example: September 2017 d
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201902  
-February 2019 data    
-Removal of a 2 zipcodes.  
+Version 1.3.201903  
+March 2019 data    
+Removal of a 1 zipcodes.  
 npm audit: (+) 0 vulnerabilities found.  
 Stryker mutation tests.  Passed 100.0  
 
@@ -102,6 +102,12 @@ the best way to get the data and how to convert it into the format that this mod
 Note: This is a fork of [davglass' excellent zipcode lookup project](https://github.com/davglass/zipcodes).
 
 ## Historical Change Log
+Version 1.3.201902  
+February 2019 data    
+Removal of a 2 zipcodes.  
+npm audit: (+) 0 vulnerabilities found.  
+Stryker mutation tests.  Passed 100.0  
+
 Version 1.3.201901  
 January 2019 data - no difference from December 2018.    
 npm audit: (+) 0 vulnerabilities found.  
