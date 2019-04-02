@@ -11,8 +11,7 @@ This application only has the default zip code information and only for the 50 U
 
 ## Last Change Log
 Version 1.3.201904  
-April 2019 data    
-Removal of a 1 zipcodes.  
+April 2019 data - no difference from March 2019.     
 npm audit: (+) 0 vulnerabilities found.  
 Stryker mutation tests.  Passed 100.0  
 
