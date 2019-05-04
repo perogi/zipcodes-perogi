@@ -71,8 +71,9 @@ describe('zipcode timezone lookup tests', () => {
 
 
 describe('lookup zipcodes by city, state tests', () => {
+  let l;
   it("should find by a valid city and state", () => {
-    let l = zipcodes.lookupByName("Marion", "il");
+    l = zipcodes.lookupByName("Marion", "il");
     expect(l.length).to.equal(1);
 
     l = zipcodes.lookupByName("Marion", "Illinois");
@@ -110,6 +111,7 @@ describe('lookup zipcodes by city, state tests', () => {
 });
 
 describe('lookup cities by state tests', () => {
+  let l;
   it("should find by a valid state abbreviation", () => {
     let l = zipcodes.lookupByState("RI");
     expect(l.length).to.equal(90);
