@@ -10,6 +10,8 @@ describe('zipcode lookup tests', () => {
     expect(result.city).to.equal("Concord");
     expect(result.state).to.equal("NH");
     expect(result.timeZoneId).to.equal("America/New_York");
+    expect(result.latitude).to.equal("43.23876");
+    expect(result.longitude).to.equal("-71.511");
   });
 
   it(' a bad zipcode is sent in', () => {
