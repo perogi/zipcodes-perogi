@@ -7,3 +7,6 @@ scripts/*.csv
 /.idea/
 scripts/runTimezone.js
 zipcodes-perogi.iml
+/.stryker-tmp
+/lib/zipcodeLookupData.js
+.npmrc

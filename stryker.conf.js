@@ -5,11 +5,13 @@ module.exports = function(config) {
       "!lib/codes.js",
       "!lib/states.js"
     ],
-    testRunner: "mocha",
-    testFramework: "mocha",
     mutator: "javascript",
-    transpilers: [],
+    maxConcurrentTestRunners: 2,
+    packageManager: "npm",
     reporters: ["clear-text", "progress", "dashboard"],
+    testRunner: "mocha",
+    transpilers: [],
+    testFramework: "mocha",
     coverageAnalysis: "perTest",
     mochaOptions: {
       files: "test/**/*.js",
