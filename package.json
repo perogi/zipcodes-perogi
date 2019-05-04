@@ -20,7 +20,7 @@
   },
   "scripts": {
     "stryker": "node_modules/.bin/stryker run stryker.conf.js",
-    "test": "npm run test-unit && npm run stryker",
+    "test": "npm run test-unit",
     "test-unit": "istanbul cover node_modules/mocha/bin/_mocha test/*.test.js"
   },
   "dependencies": {
