@@ -23,25 +23,28 @@ Stryker mutation tests.  Passed 100.0
     const hills = zipcodes.lookup(90210);  
       
     response:
-    { 
-        zip: '90210',
-        city: 'Beverly Hills',
-        state: 'CA',
-        timeZoneId: 'America/Los_Angeles'
+    {
+      "zip": "90210",
+      "city": "Beverly Hills",
+      "state": "CA",
+      "latitude": "34.096629",
+      "longitude": "-118.412426",
+      "timeZoneId": "America/Los_Angeles"
     }
 
 ## Zipcode LookupWithTime
     const hills = zipcodes.lookupWithTime(03301);  
       
     response:
-    { 
-        zip: '03301',
-        city:'Concord',
-        state:'NH',
-        timeZoneId:'America/New_York',
-        time:'2017-09-08T00:19:17-04:00'
+    {
+      "zip": "03301",
+      "city": "Concord",
+      "state": "NH",
+      "latitude": "43.23876",
+      "longitude": "-71.511",
+      "timeZoneId": "America/New_York",
+      "time": "2019-05-03T22:15:05-04:00"
     }
-
 
 ## Lookup By Name
     const l = zipcodes.lookupByName('Concord', 'NH');  
@@ -49,30 +52,38 @@ Stryker mutation tests.  Passed 100.0
     //Always returns an array, since cities can have multiple zip codes
     response: 
     [ 
-        { 
-            zip: '03301',
-            city: 'Concord',
-            state: 'NH',
-            timeZoneId: 'America/New_York"
+        {
+          "zip": "03301",
+          "city": "Concord",
+          "state": "NH",
+          "latitude": "43.23876",
+          "longitude": "-71.511",
+          "timeZoneId": "America/New_York"
         },
-        { 
-            zip: '03302',
-            city: 'Concord',
-            state: 'NH',
-            timeZoneId: 'America/New_York"
+        {
+          "zip": "03302",
+          "city": "Concord",
+          "state": "NH",
+          "latitude": "43.23387",
+          "longitude": "-71.55967",
+          "timeZoneId": "America/New_York"
         },
-        { 
-            zip: '03303',
-            city: 'Concord',
-            state: 'NH',
-            timeZoneId: 'America/New_York" 
-        } ,
-        { 
-            zip: '03305',
-            city: 'Concord',
-            state: 'NH',
-            timeZoneId: 'America/New_York"
-        } 
+        {
+          "zip": "03303",
+          "city": "Concord",
+          "state": "NH",
+          "latitude": "43.30368",
+          "longitude": "-71.6385",
+          "timeZoneId": "America/New_York"
+        },
+        {
+          "zip": "03305",
+          "city": "Concord",
+          "state": "NH",
+          "latitude": "43.206116",
+          "longitude": "-71.539058",
+          "timeZoneId": "America/New_York"
+        }
      ]
      
 ## Lookup By State
@@ -80,18 +91,30 @@ Stryker mutation tests.  Passed 100.0
       
     //response would be an array of cities with corresponding data
     [ 
-        { 
-            zip: '03031',
-            city: 'Amherst',
-            state: 'NH',
-            timeZoneId: 'America/New_York"
+        {
+          "zip": "03031",
+          "city": "Amherst",
+          "state": "NH",
+          "latitude": "42.860306",
+          "longitude": "-71.608545",
+          "timeZoneId": "America/New_York"
         },
-        { 
-            zip: '03032',
-            city: 'Auburn',
-            state: 'NH',
-            timeZoneId: 'America/New_York"
+        {
+          "zip": "03032",
+          "city": "Auburn",
+          "state": "NH",
+          "latitude": "42.997422",
+          "longitude": "-71.35159",
+          "timeZoneId": "America/New_York"
         },
+        {
+          "zip": "03033",
+          "city": "Brookline",
+          "state": "NH",
+          "latitude": "42.739053",
+          "longitude": "-71.677821",
+          "timeZoneId": "America/New_York"
+        }
      ...
      ]
 
