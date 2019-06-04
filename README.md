@@ -4,17 +4,16 @@
 A localized (flatfile) zipcode lookup.
 
 Zipcode data is taken from a new more up-to-date source compared to [davglass'](https://github.com/davglass/zipcodes) project. 
-This source has monthly updates for zip code data. For example: September 2017 data removed 7 zip codes that are no longer used.
+This source has monthly updates for zip code data. For example: June 2019 data added 2 zip codes.
 
 ## Other Differences
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201905  
-Please note: Due to many requests, Latitude and Longitude are now returned (if provided).  
-May 2019 data - Removal of one zipcode.  
-npm audit: (+) 0 vulnerabilities found.  
-Stryker mutation tests.  Passed 100.0  
+Version 1.3.201906
+June 2019 data - addition of 2 zipcodes.
+npm audit: found 0 vulnerabilities 
+Stryker mutation tests.  Passed 100.0  0 Survived
 
 ## Usage
     var zipcodes = require('zipcodes-perogi');
