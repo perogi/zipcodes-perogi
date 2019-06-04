@@ -1,4 +1,10 @@
 ## Historical Change Log
+Version 1.3.201905  
+Please note: Due to many requests, Latitude and Longitude are now returned (if provided).  
+May 2019 data - Removal of one zipcode.  
+npm audit: (+) 0 vulnerabilities found.  
+Stryker mutation tests.  Passed 100.0  
+
 Version 1.3.201904  
 April 2019 data - no difference from March 2019.     
 npm audit: (+) 0 vulnerabilities found.  
