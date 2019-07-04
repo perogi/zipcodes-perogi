@@ -1,7 +1,7 @@
 {
   "name": "zipcodes-perogi",
   "description": "A zipcode lookup package with the latest zipcode information updated every month.",
-  "version": "1.4.201906",
+  "version": "1.4.201907",
   "author": "S Perreault <github@perogi.org>",
   "keywords": [
     "zipcode",
