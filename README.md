@@ -10,8 +10,8 @@ This source has monthly updates for zip code data. For example: June 2019 data a
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201906
-June 2019 data - addition of 2 zipcodes.
+Version 1.3.201907
+July 2019 data - 0 changes from June 2019
 npm audit: found 0 vulnerabilities 
 Stryker mutation tests.  Passed 100.0  0 Survived
 
