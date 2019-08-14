@@ -3,15 +3,15 @@
 
 A localized (flatfile) zipcode lookup.
 
-Zipcode data is taken from a new more up-to-date source compared to [davglass'](https://github.com/davglass/zipcodes) project. 
+Zipcode data is taken from a new more up-to-date zipcode source compared to [davglass'](https://github.com/davglass/zipcodes) project. 
 This source has monthly updates for zip code data. For example: June 2019 data added 2 zip codes.
 
 ## Other Differences
 This application only has the default zip code information and only for the 50 US states and Washington, DC.  
 
 ## Last Change Log
-Version 1.3.201907
-July 2019 data - 0 changes from June 2019
+Version 1.3.201908
+1 change from July 2019 - Removal of one zipcode
 npm audit: found 0 vulnerabilities 
 Stryker mutation tests.  Passed 100.0  0 Survived
 

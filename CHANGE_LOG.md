@@ -1,4 +1,9 @@
 ## Historical Change Log
+Version 1.3.201907
+July 2019 data - 0 changes from June 2019
+npm audit: found 0 vulnerabilities 
+Stryker mutation tests.  Passed 100.0  0 Survived
+
 Version 1.3.201906
 June 2019 data - addition of 2 zipcodes.
 npm audit: found 0 vulnerabilities 
