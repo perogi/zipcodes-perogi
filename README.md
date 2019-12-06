@@ -3,6 +3,9 @@
 
 A localized (flatfile) zipcode lookup.
 
+**Sadly the development of this API has been postponed due to the increase in price to get an updated zipcode list on a monthly basis.**
+I'm currently coding a solution that will use an only zip code lookup to pull in the data. I hope to finish this up during the Christmas break.  Thanks!
+
 Zipcode data is taken from a new more up-to-date zipcode source compared to [davglass'](https://github.com/davglass/zipcodes) project. 
 This source has monthly updates for zip code data. For example: June 2019 data added 2 zip codes.
 
